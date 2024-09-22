@@ -68,6 +68,9 @@ vim.api.nvim_set_keymap('x', 'y', '<C-r>', { noremap = true, silent = true })
 
 vim.api.nvim_buf_set_keymap(0, 'n', 'er', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap=true, silent=true })
 
+-- Set 'n' for next search result and 'p' for previous search result
+vim.api.nvim_set_keymap('n', 'n', 'n', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'p', 'N', { noremap = true, silent = true })
 
 -- lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
